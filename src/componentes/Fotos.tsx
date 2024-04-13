@@ -15,9 +15,7 @@ const Fotos: React.FC = () => {
         useEffect(() => {
         const buscarFotos = async () => {
             const resposta = await fetch('https://jsonplaceholder.typicode.com/photos');
-            
             const dadosFotos = await resposta.json();
-
             setFotos(dadosFotos);
         };
         

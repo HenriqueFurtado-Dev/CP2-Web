@@ -33,11 +33,11 @@ const Usuarios: React.FC = () => {
     return (
         <main>
             <div className="user-response">
-                <h1>API de usuários</h1>
+                <h1 className="mb-8 text-red-400">API de usuários</h1>
                 <table>
                     <thead>
-                        <tr>
-                            <th>ID</th>
+                        <tr className="bg-red-900 m-3">
+                            <th className="p-5 bg-red-200">ID</th>
                             <th>Nome</th>
                             <th>Usuário</th>
                             <th>Email</th>
@@ -46,12 +46,12 @@ const Usuarios: React.FC = () => {
                     </thead>
                     <tbody>
                         {usuarios.map(usuario => (
-                            <tr key={usuario.id}>
-                                <td>{usuario.id}</td>
-                                <td>{usuario.name}</td>
-                                <td>{usuario.username}</td>
-                                <td>{usuario.email}</td>
-                                <td>{usuario.phone}</td>
+                            <tr className="text-orange-800 p-3" key={usuario.id}>
+                                <td className="p-5 bg-red-200">{usuario.id}</td>
+                                <td className="p-5 bg-green-200">{usuario.name}</td>
+                                <td className="p-5 bg-green-200">{usuario.username}</td>
+                                <td className="p-5 bg-green-200">{usuario.email}</td>
+                                <td className="p-5 bg-green-200">{usuario.phone}</td>
                             </tr>
                         ))}
                     </tbody>
