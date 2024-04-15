@@ -34,7 +34,7 @@ const Posts: React.FC = () => {
                 <h1 className="mt-10 mb-10 font-bold">API de Posts</h1>
                 <ul className="flex flex-wrap w-full">
                     {posts.map(post =>(
-                        <li className="post flex-grow w-1/3 bg-blue-950 p-8 bg-red-200 m-2 rounded-lg">
+                        <li className="post flex-grow w-1/3 bg-blue-950 p-8 bg-blue-400 m-2 rounded-lg">
                             <h2 className="text-2xl font-bold" text-red>{post.id}</h2>
                             <p className="text-orange-600 text-2xl font-bold mt-2 mb-7">{post.title}</p>
                             <p className="">{post.body}</p>
