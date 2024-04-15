@@ -26,8 +26,8 @@ function App() {
         <Route path="/fotos" element={<Fotos />} />
         <Route path="/posts" element={<Posts />} />
       </Routes>
-      <footer>
-        <p>Carlos Henrique Furtado - RM: 553597 | 1TDSZ</p>
+      <footer className='p-10'>
+        <p>Carlos Henrique Furtado - RM: 553597 | 1TDSZ <br /> <a target='_blank' href="https://github.com/HenriqueFurtado-Dev/CP2-Web"> Link para o Github </a></p>
       </footer>
     </Router>
  );

@@ -31,13 +31,13 @@ const Posts: React.FC = () => {
     return (
         <main>
             <div className="user-response">
-                <h1>API de Posts</h1>
+                <h1 className="mt-10 mb-10 font-bold">API de Posts</h1>
                 <ul className="flex flex-wrap w-full">
                     {posts.map(post =>(
-                        <li className="post flex-grow w-1/3 bg-red p-4">
-                            <h2 text-red>{post.id}</h2>
-                            <p>{post.title}</p>
-                            <p>{post.body}</p>
+                        <li className="post flex-grow w-1/3 bg-blue-950 p-8 bg-red-200 m-2 rounded-lg">
+                            <h2 className="text-2xl font-bold" text-red>{post.id}</h2>
+                            <p className="text-orange-600 text-2xl font-bold mt-2 mb-7">{post.title}</p>
+                            <p className="">{post.body}</p>
                         </li>
                     ))}
                 </ul>

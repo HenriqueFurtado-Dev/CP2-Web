@@ -28,10 +28,10 @@ const Fotos: React.FC = () => {
     return (
         <main>
              <div className="user-response">
-                <h1>API de Fotos</h1>
+                <h1 className="font-bold">API de Fotos</h1>
                 <ul>
                     {fotos.map(foto =>(
-                        <li className="usuario" key={foto.title}>
+                        <li className="usuario bg-blue-950 p-5 m-10 rounded-2xl flex flex-col items-center justify-center gap-4" key={foto.title}>
                             <img className="photo-user w-28 rounded-2xl" src={foto.url} alt="" />
                             {foto.title}
                         </li>

@@ -7,6 +7,12 @@ interface Usuarios {
     username: string;
     email: string;
     phone: string;
+    adress: {
+        street: string;
+        suite: string;
+        city: string;
+        zipcode: string;
+    }
 }
 
 const Usuarios: React.FC = () => {
@@ -33,25 +39,32 @@ const Usuarios: React.FC = () => {
     return (
         <main>
             <div className="user-response">
-                <h1 className="mb-8 text-red-400">API de usuários</h1>
+                <h1 className="mb-8 text-white font-bold">API de usuários</h1>
                 <table>
                     <thead>
-                        <tr className="bg-red-900 m-3">
-                            <th className="p-5 bg-red-200">ID</th>
+                        <tr className="bg-blue-600 m-3">
+                            <th className="p-5 bg-blue-900">ID</th>
                             <th>Nome</th>
                             <th>Usuário</th>
                             <th>Email</th>
                             <th>Telefone</th>
+                            <th>Endereco</th>
                         </tr>
                     </thead>
                     <tbody>
                         {usuarios.map(usuario => (
-                            <tr className="text-orange-800 p-3" key={usuario.id}>
-                                <td className="p-5 bg-red-200">{usuario.id}</td>
-                                <td className="p-5 bg-green-200">{usuario.name}</td>
-                                <td className="p-5 bg-green-200">{usuario.username}</td>
-                                <td className="p-5 bg-green-200">{usuario.email}</td>
-                                <td className="p-5 bg-green-200">{usuario.phone}</td>
+                            <tr className="text-white p-3" key={usuario.id}>
+                                <td className="p-5 bg-blue-900 text-white">{usuario.id}</td>
+                                <td className="p-5 bg-blue-300">{usuario.name}</td>
+                                <td className="p-5 bg-blue-400">{usuario.username}</td>
+                                <td className="p-5 bg-blue-300">{usuario.email}</td>
+                                <td className="p-5 bg-blue-400">{usuario.phone}</td>
+                                <td className="p-5 bg-blue-300">
+                                    {usuario.address.street} - 
+                                    {usuario.address.city}
+                                    {usuario.address.suite}
+                                    {usuario.address.zipcode}
+                                </td>
                             </tr>
                         ))}
                     </tbody>
