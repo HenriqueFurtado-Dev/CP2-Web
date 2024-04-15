@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+// Define os tipos das informacoes coletadas
 interface Fotos {
     id: number;
     title: string;
@@ -9,8 +10,10 @@ interface Fotos {
 
 const Fotos: React.FC = () => {
 
+    // UseState
     const [fotos, setFotos] = useState([]);
 
+    // Utiliza o try + fetch para chamar os dados da API e salvar dentro de uma variavel para ser utilizada depois
     try {
         useEffect(() => {
         const buscarFotos = async () => {
@@ -21,6 +24,7 @@ const Fotos: React.FC = () => {
         
         buscarFotos();
         }, []);  
+    // Coleta o erro e exibe no console
     } catch (e) {
         console.log("Erro ao realizar a conexão com a API JSOn placeholder")
     }

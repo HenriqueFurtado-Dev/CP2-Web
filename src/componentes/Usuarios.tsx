@@ -40,17 +40,15 @@ const Usuarios: React.FC = () => {
 
     return (
         // Layout utilizando o tailwind
-        <main>
+        <main class="mx-auto">
             <div className="user-response">
                 <h1 className="mb-8 text-white font-bold">API de usuários</h1>
-                <table>
+                <table className="max-w-screen-xl mx-auto">
                     <thead>
                         <tr className="bg-blue-600 m-3">
-                            <th className="p-5 bg-blue-900">ID</th>
+                            <th className="py-4 px-5 bg-blue-900">ID</th>
                             <th>Nome</th>
-                            <th>Usuário</th>
                             <th>Email</th>
-                            <th>Telefone</th>
                             <th>Endereco</th>
                         </tr>
                     </thead>
@@ -58,12 +56,10 @@ const Usuarios: React.FC = () => {
                         {/* Utilizamos o MAP para percorrer os dados da API e criar um elemento para cada usuário */}
                         {usuarios.map(usuario => (
                             <tr className="text-white p-3" key={usuario.id}>
-                                <td className="p-5 bg-blue-900 text-white">{usuario.id}</td>
-                                <td className="p-5 bg-blue-300">{usuario.name}</td>
-                                <td className="p-5 bg-blue-400">{usuario.username}</td>
-                                <td className="p-5 bg-blue-300">{usuario.email}</td>
-                                <td className="p-5 bg-blue-400">{usuario.phone}</td>
-                                <td className="p-5 bg-blue-300">
+                                <td className="p-2 bg-blue-900 text-white">{usuario.id}</td>
+                                <td className="p-2 bg-blue-300">{usuario.name}</td>
+                                <td className="p-2 bg-blue-400">{usuario.email}</td>
+                                <td className="p-2 bg-blue-300">
                                     {/* Como Address é um objeto, acessamos o item que esta dentro do objeto! */}
                                     {usuario.address.street} - 
                                     {usuario.address.city}
