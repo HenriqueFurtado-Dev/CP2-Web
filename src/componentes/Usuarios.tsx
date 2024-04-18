@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-// Define o tipo de dado que esta sendo coletado da API
+// Utilizando a Interface para definir o tipo(String, number, objeto) de cada propriedade que será utilizada 
 interface Usuarios {
     id: number;
     name: string;
@@ -40,9 +40,9 @@ const Usuarios: React.FC = () => {
 
     return (
         // Layout utilizando o tailwind
-        <main class="mx-auto">
+        <main className="mx-auto">
             <div className="user-response">
-                <h1 className="mb-8 text-white font-bold">API de usuários</h1>
+                <h1 className="mt-5 mb-20 font-bold text-6xl text-orange-600">API de usuários</h1>
                 <table className="max-w-screen-xl mx-auto">
                     <thead>
                         <tr className="bg-blue-600 m-3">
@@ -53,7 +53,7 @@ const Usuarios: React.FC = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* Utilizamos o MAP para percorrer os dados da API e criar um elemento para cada usuário */}
+                        {/* Utilizamos o MAP para percorrer os dados da API e criar um elemento para cada usuário, mas nesse caso criamos as linhas da tabela no lugar de uma lista */}
                         {usuarios.map(usuario => (
                             <tr className="text-white p-3" key={usuario.id}>
                                 <td className="p-2 bg-blue-900 text-white">{usuario.id}</td>
